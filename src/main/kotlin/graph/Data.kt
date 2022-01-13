@@ -1,7 +1,8 @@
 package graph
 
 class UndirectedGraph {
-  data class Node(val label: String)
+  data class Position(val x: Int, val y: Int)
+  data class Node(val label: String, val position: Position? = null)
   data class Edge(val from: Node, val to: Node, val weight: Int = 1)
 
   data class Graph(val nodes: List<Node>, val edges: List<Edge>) {
